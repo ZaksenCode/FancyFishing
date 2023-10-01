@@ -1,0 +1,897 @@
+# skills level and requirement xp for it
+levels:
+  # format: '15: 7000' -> 15 - level, 7000 - xp
+  1: 0
+  2: 100
+  3: 200
+  4: 500
+  5: 1000
+  6: 1500
+  7: 2000
+  8: 2500
+  9: 3000
+  10: 3500
+  11: 4000
+  12: 4500
+  13: 5000
+  14: 6000
+  15: 7000
+  16: 8000
+  17: 9000
+  18: 10000
+  19: 12500
+  20: 15000
+  21: 17500
+  22: 20000
+  23: 25000
+  24: 30000
+  25: 35000
+  26: 40000
+  27: 45000
+  28: 50000
+  29: 75000
+  30: 100000
+
+exp:
+  on_catch:
+    min: 1
+    max: 10
+
+loot_table:
+  # name: <- use as path in plugin (can be anything, like: 'as0d8asd8a9shd')
+  #   type: ITEM/MOB
+  #   name: Name
+  #   chance: 1.0
+  #   // item
+  #   lore:
+  #   - Example item
+  #   - Just an item
+  #   material: STICK
+  #   sub_type: none, crate
+  #   // crate
+  #   crate_name: common_crate
+  #   // mob
+  #   health: 20.0
+  #   entity_type: ZOMBIE
+  fancy_rod:
+    chicken:
+      type: MOB
+      name: "Курочка"
+      chance: 1.0
+      health: 8.0
+      entity_type: CHICKEN
+    salmon:
+      type: MOB
+      name: "Лосось"
+      chance: 1.0
+      health: 6.0
+      entity_type: SALMON
+    cod:
+      type: MOB
+      name: "Треска"
+      chance: 1.0
+      health: 6.0
+      entity_type: COD
+    silverfish:
+      type: MOB
+      name: "Крыса"
+      chance: 1.0
+      health: 8.0
+      entity_type: SILVERFISH
+    bat:
+      type: MOB
+      name: "Летучая мышь"
+      chance: 1.0
+      health: 5.0
+      entity_type: BAT
+  realistic_rod:
+    cod:
+      type: MOB
+      name: "Треска OwO"
+      chance: 0.44
+      health: 8.0
+      entity_type: COD
+    salmon:
+      type: MOB
+      name: "Лосось UwU"
+      chance: 0.33
+      health: 8.0
+      entity_type: SALMON
+    tropical_fish:
+      type: MOB
+      name: "Тропическая рыбка DwD"
+      chance: 0.11
+      health: 8.0
+      entity_type: TROPICAL_FISH
+    pufferfish:
+      type: MOB
+      name: "Рыба фугу GwG"
+      chance: 0.05
+      health: 8.0
+      entity_type: PUFFERFISH
+    squid:
+      type: MOB
+      name: "Спрут ^v^"
+      chance: 0.03
+      health: 8.0
+      entity_type: SQUID
+    dolphin:
+      type: MOB
+      name: "Дельфин QwQ"
+      chance: 0.01
+      health: 8.0
+      entity_type: SQUID
+    guardian:
+      type: MOB
+      name: "Страж °^°"
+      chance: 0.001
+      health: 8.0
+      entity_type: GUARDIAN
+  pufferfish_rod:
+    pufferfish_1:
+      type: MOB
+      name: "Рыба фугу"
+      chance: 0.30
+      health: 8.0
+      entity_type: PUFFERFISH
+    drowned:
+      type: MOB
+      name: "Утопленник"
+      chance: 0.21
+      health: 20.0
+      entity_type: DROWNED
+    pufferfish_2:
+      type: MOB
+      name: "Редкая рыба фугу"
+      chance: 0.10
+      health: 8.0
+      entity_type: PUFFERFISH
+    pufferfish_3:
+      type: MOB
+      name: "5opka"
+      chance: 0.03
+      health: 15.0
+      entity_type: PUFFERFISH
+    chicken:
+      type: MOB
+      name: "Nerkin"
+      chance: 0.02
+      health: 15.0
+      entity_type: CHICKEN
+    witch:
+      type: MOB
+      name: "Ведьма"
+      chance: 0.12
+      health: 20.0
+      entity_type: WITCH
+    phantom:
+      type: MOB
+      name: "Фантом"
+      chance: 0.12
+      health: 10.0
+      entity_type: PHANTOM
+    guardian:
+      type: MOB
+      name: "Страж"
+      chance: 0.09
+      health: 20.0
+      entity_type: GUARDIAN
+    elder_guardian:
+      type: MOB
+      name: "Древний страж"
+      chance: 0.01
+      health: 20.0
+      entity_type: ELDER_GUARDIAN
+  nether_rod:
+    blaze:
+      type: MOB
+      name: "Блейз"
+      chance: 0.20
+      health: 20.0
+      entity_type: BLAZE
+    piglin:
+      type: MOB
+      name: "Пиглин"
+      chance: 0.15
+      health: 20.0
+      entity_type: PIGLIN
+    piglin_brute:
+      type: MOB
+      name: "Брутальный пиглин"
+      chance: 0.04
+      health: 30.0
+      entity_type: PIGLIN_BRUTE
+    skeleton_horse:
+      type: MOB
+      name: "Лошадка из костей"
+      chance: 0.01
+      health: 30.0
+      entity_type: SKELETON_HORSE
+    hoglin:
+      type: MOB
+      name: "Хоглин"
+      chance: 0.10
+      health: 20.0
+      entity_type: HOGLIN
+    zombie_horse:
+      type: MOB
+      name: "Лошадка из гнилой плоти"
+      chance: 0.05
+      health: 30.0
+      entity_type: ZOMBIE_HORSE
+    zombified_piglin:
+      type: MOB
+      name: "Зомбифицированый пиглин"
+      chance: 0.10
+      health: 20.0
+      entity_type: ZOMBIFIED_PIGLIN
+  mining_rod:
+    miner:
+      type: MOB
+      name: "Зомби шахтер"
+      chance: 0.05
+      health: 30.0
+      entity_type: ZOMBIE
+    stone:
+      type: ITEM
+      name: "&cКамень"
+      chance: 0.10
+      lore:
+      - "&dСамый обычный камень"
+      - "&bПойман игроком: &r&a %player%"
+      material: STONE
+    coal:
+      type: ITEM
+      name: "&cУголь"
+      chance: 0.15
+      lore:
+        - "&dТвердое топливо"
+        - "&bПойман игроком: &r&a %player%"
+      material: COAL
+    coal_ore:
+      type: ITEM
+      name: "&cУгольная руда"
+      chance: 0.15
+      lore:
+        - "&dПрямиком из шахт"
+        - "&bПойман игроком: &r&a %player%"
+      material: COAL_ORE
+    iron:
+      type: ITEM
+      name: "&cЖелезо"
+      chance: 0.10
+      lore:
+        - "&dЛучший метал для новичка!"
+        - "&bПойман игроком: &r&a %player%"
+      material: IRON_INGOT
+    iron_ore:
+      type: ITEM
+      name: "&cЖелезная руда"
+      chance: 0.10
+      lore:
+        - "&dС пылу с жару"
+        - "&bПойман игроком: &r&a %player%"
+      material: IRON_ORE
+    gold:
+      type: ITEM
+      name: "&cЗолото"
+      chance: 0.08
+      lore:
+        - "&dА говорили денги на вес золота"
+        - "&bПойман игроком: &r&a %player%"
+      material: GOLD_INGOT
+    gold_ore:
+      type: ITEM
+      name: "&cЗолотая руда"
+      chance: 0.07
+      lore:
+        - "&dВсе так-же блестит"
+        - "&bПойман игроком: &r&a %player%"
+      material: GOLD_ORE
+    diamond:
+      type: ITEM
+      name: "&cАлмаз"
+      chance: 0.01
+      lore:
+        - "&dСамый ценный?"
+        - "&bПойман игроком: &r&a %player%"
+      material: DIAMOND
+  meat_rod:
+    mutton:
+      type: ITEM
+      name: "&cБаранина"
+      chance: 0.10
+      lore:
+        - "&dВегоны нервно курят в сторонке"
+        - "&bПойман игроком: &r&a %player%"
+      material: MUTTON
+    beef:
+      type: ITEM
+      name: "&cГовядина"
+      chance: 0.10
+      lore:
+        - "&dЧуть поджарить и будет стейк!"
+        - "&bПойман игроком: &r&a %player%"
+      material: BEEF
+    porkchop:
+      type: ITEM
+      name: "&cСвинина"
+      chance: 0.10
+      lore:
+        - "&dУже почти бекон"
+        - "&bПойман игроком: &r&a %player%"
+      material: PORKCHOP
+    chicken:
+      type: ITEM
+      name: "&cКурятина"
+      chance: 0.10
+      lore:
+        - "&dПохоже на куриное филе"
+        - "&bПойман игроком: &r&a %player%"
+      material: CHICKEN
+    rabbit:
+      type: ITEM
+      name: "&cКролчятина"
+      chance: 0.10
+      lore:
+        - "&dПухлый кролик"
+        - "&bПойман игроком: &r&a %player%"
+      material: RABBIT
+    cow:
+      type: MOB
+      name: "Корова"
+      chance: 0.05
+      health: 10.0
+      entity_type: COW
+    sheep:
+      type: MOB
+      name: "Овца"
+      chance: 0.05
+      health: 10.0
+      entity_type: SHEEP
+    pig:
+      type: MOB
+      name: "Свинья"
+      chance: 0.05
+      health: 10.0
+      entity_type: PIG
+    chick:
+      type: MOB
+      name: "Курица"
+      chance: 0.05
+      health: 8.0
+      entity_type: CHICKEN
+    rabbi:
+      type: MOB
+      name: "Кролик"
+      chance: 0.05
+      health: 8.0
+      entity_type: RABBIT
+  pirate_rod:
+    drowned:
+      type: MOB
+      name: "Затонувший пират"
+      chance: 0.05
+      health: 8.0
+      entity_type: DROWNED
+    inc_sac:
+      type: ITEM
+      name: "&fЧернильный мешок"
+      chance: 0.04
+      lore:
+        - "&7Чернее черного"
+        - "&bПойман игроком: &r&a %player%"
+      material: INK_SAC
+    flint:
+      type: ITEM
+      name: "&fКремень"
+      chance: 0.10
+      lore:
+        - "&7Для чего он нужен?"
+        - "&bПойман игроком: &r&a %player%"
+      material: FLINT
+    bone:
+      type: ITEM
+      name: "&fКость"
+      chance: 0.15
+      lore:
+        - "&7Возможно даже человека"
+        - "&bПойман игроком: &r&a %player%"
+      material: BONE
+    prismarine:
+      type: ITEM
+      name: "&fПризмарин"
+      chance: 0.10
+      lore:
+        - "&7До чего же он красив"
+        - "&bПойман игроком: &r&a %player%"
+      material: PRISMARINE
+    iron_nugget:
+      type: ITEM
+      name: "&fЖелезный самородок"
+      chance: 0.15
+      lore:
+        - "&7Часть чего-то большего"
+        - "&bПойман игроком: &r&a %player%"
+      material: IRON_NUGGET
+    gold_nugget:
+      type: ITEM
+      name: "&fЗолотой самородок"
+      chance: 0.15
+      lore:
+        - "&7Память о былых времних"
+        - "&bПойман игроком: &r&a %player%"
+      material: GOLD_NUGGET
+    gold:
+      type: ITEM
+      name: "&fЗолото"
+      chance: 0.10
+      lore:
+        - "&7Сокровище древних пиратов"
+        - "&bПойман игроком: &r&a %player%"
+      material: GOLD_INGOT
+    gold_block:
+      type: ITEM
+      name: "&fЗолотой блок"
+      chance: 0.05
+      lore:
+        - "&7Тяжеленный"
+        - "&bПойман игроком: &r&a %player%"
+      material: GOLD_BLOCK
+    common_crate:
+      type: ITEM
+      name: "&fЯщик"
+      chance: 0.05
+      lore:
+        - "&7Обычный ящик"
+        - "&bПойман игроком: &r&a %player%"
+      material: BARREL
+      sub_type: CRATE
+      crate_name: "common_crate"
+    uncommon_crate:
+      type: ITEM
+      name: "&cНеобычный ящик"
+      chance: 0.01
+      lore:
+        - "&7В нем какой-то новый лут?"
+        - "&bПойман игроком: &r&a %player%"
+      material: BARREL
+      sub_type: CRATE
+      crate_name: "uncommon_crate"
+  grass_rod:
+    dirt:
+      type: ITEM
+      name: "&fЗемля"
+      chance: 0.20
+      lore:
+        - "&7Обычный кусок грязи"
+        - "&bПойман игроком: &r&a %player%"
+      material: DIRT
+    coarse_dirt:
+      type: ITEM
+      name: "&fКаменистая земля"
+      chance: 0.20
+      lore:
+        - "&7Сила камня или земли?"
+        - "&bПойман игроком: &r&a %player%"
+      material: COARSE_DIRT
+    podzol:
+      type: ITEM
+      name: "&fПодзол"
+      chance: 0.13
+      lore:
+        - "&7Что-то необычное?"
+        - "&bПойман игроком: &r&a %player%"
+      material: PODZOL
+    grass_block:
+      type: ITEM
+      name: "&fДерн"
+      chance: 0.12
+      lore:
+        - "&7Вы открыли новые земли"
+        - "&bПойман игроком: &r&a %player%"
+      material: GRASS_BLOCK
+    grass:
+      type: ITEM
+      name: "&fТрава"
+      chance: 0.10
+      lore:
+        - "&7Только не кури, это не та трава!"
+        - "&bПойман игроком: &r&a %player%"
+      material: GRASS
+    seagrass:
+      type: ITEM
+      name: "&fМорская трава"
+      chance: 0.10
+      lore:
+        - "&7Её тоже нельзя курить!"
+        - "&bПойман игроком: &r&a %player%"
+      material: SEAGRASS
+    sea_pickle:
+      type: ITEM
+      name: "&fМорской огурец"
+      chance: 0.10
+      lore:
+        - "&7Не годен в пищю"
+        - "&bПойман игроком: &r&a %player%"
+      material: SEA_PICKLE
+    cactus:
+      type: ITEM
+      name: "&fКактус"
+      chance: 0.05
+      lore:
+        - "&7Как ты его держешь?"
+        - "&bПойман игроком: &r&a %player%"
+      material: CACTUS
+    sugar_cane:
+      type: ITEM
+      name: "&fСахарный тросник"
+      chance: 0.05
+      lore:
+        - "&7Ты мой сахарок"
+        - "&bПойман игроком: &r&a %player%"
+      material: SUGAR_CANE
+    bamboo:
+      type: ITEM
+      name: "&fБамбук"
+      chance: 0.05
+      lore:
+        - "&7И да, это тоже нельзя курить"
+        - "&bПойман игроком: &r&a %player%"
+      material: BAMBOO
+    mycelium:
+      type: ITEM
+      name: "&fМицелий"
+      chance: 0.05
+      lore:
+        - "&7Уникальный в своем роде"
+        - "&bПойман игроком: &r&a %player%"
+      material: MYCELIUM
+
+barrel_loot:
+  common_crate:
+    air:
+      name: "&aAir"
+      lore:
+        - "&aAir"
+      chance: 0.60
+      material: AIR
+    stick:
+      name: "&bПалка"
+      lore:
+        - "&3Просто палка"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.10
+      material: STICK
+    kelp:
+      name: "&bЛаминария"
+      lore:
+        - "&3Кто-то ведь ест их"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.03
+      material: KELP
+    bone:
+      name: "&bКость"
+      lore:
+        - "&3Spooky, scary skeleton"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.07
+      material: BONE
+    coal:
+      name: "&bУголь"
+      lore:
+        - "&3Может пригодится"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.08
+      material: COAL
+    salmon:
+      name: "&bЛосось"
+      lore:
+        - "&3Самый настоящий"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.05
+      material: SALMON
+    cod:
+      name: "&bТреска"
+      lore:
+        - "&3Не забудь пожарить!"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.05
+      material: COD
+    iron:
+      name: "&bЖелезо"
+      lore:
+        - "&3Полезый метал"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.02
+      material: IRON_INGOT
+  uncommon_crate:
+    air:
+      name: "&aAir"
+      lore:
+        - "&aAir"
+      chance: 0.50
+      material: AIR
+    coal:
+      name: "&bУголь"
+      lore:
+        - "&3Редкая ли вещь?"
+      chance: 0.05
+      material: COAL
+    iron:
+      name: "&bЖелезо"
+      lore:
+        - "&3Позелно во всех сферах"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.05
+      material: IRON_INGOT
+    prismarine:
+      name: "&bПризмарин"
+      lore:
+        - "&3Необычный камень"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.05
+      material: PRISMARINE
+    cobblestone:
+      name: "&bБулыжник"
+      lore:
+        - "&3Это итальянский мрамор!"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.01
+      material: COBBLESTONE
+    gold_ingot:
+      name: "&bЗолото"
+      lore:
+        - "&3Любимый метал пиротов!"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.04
+      material: GOLD_INGOT
+    scute:
+      name: "&bЩиток"
+      lore:
+        - "&3Морская черепашка"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.02
+      material: SCUTE
+    slime_ball:
+      name: "&bСгусток слизи"
+      lore:
+        - "&3Такой липкий!"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.03
+      material: SLIME_BALL
+    book:
+      name: "&bКнига"
+      lore:
+        - "&3Раньше стоила дороже золота"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.05
+      material: BOOK
+    golden_carrot:
+      name: "&bЗолотая морковка"
+      lore:
+        - "&3Не сломайте зубы!"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.01
+      material: GOLDEN_CARROT
+    soul_sand:
+      name: "&bПесок душ"
+      lore:
+        - "&3Вы чюствуете тысячи летнюю боль"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.01
+      material: SOUL_SAND
+    sand:
+      name: "&bПесок"
+      lore:
+        - "&3Вероятно с ближайщего пляжа"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.08
+      material: SAND
+    name_tag:
+      name: "&bБирка"
+      lore:
+        - "&3Как тебя зовут?"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.01
+      material: NAME_TAG
+    redstone:
+      name: "&bРедстоун"
+      lore:
+        - "&3Что он забыл под водой?"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.02
+      material: REDSTONE
+    lapis_lazuli:
+      name: "&bЛазурит"
+      lore:
+        - "&3Налонен силой древних чар"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.02
+      material: LAPIS_LAZULI
+    paper:
+      name: "&bПапирус"
+      lore:
+        - "&3Древняя бумана, весь текст размыло"
+        - "&4Вспоминая название этой бумаги"
+        - "&4вы проникаетесь мыслями о подземелье"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.02
+      material: PAPER
+    glowstone_dust:
+      name: "&bСветокаменная пыль"
+      lore:
+        - "&3Озаряет ярким светом"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.03
+      material: GLOWSTONE_DUST
+    wet_sponge:
+      name: "&bМокрая губка"
+      lore:
+        - "&3Кто-то её намочил"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.02
+      material: WET_SPONGE
+    sea_lantern:
+      name: "&bМорской фонарь"
+      lore:
+        - "&3Водный источник света"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.03
+      material: SEA_LANTERN
+
+items:
+  iron_string:
+    name: "&7Железная нить"
+    description:
+      - "&bПрокачиная версия обычной нити"
+    modeldata: 1000
+  gold_string:
+    name: "&7Золотая нить"
+    description:
+      - "&bНить для знати"
+    modeldata: 1001
+  diamond_string:
+    name: "&7Алмазная нить"
+    description:
+      - "&bАх какая нить!"
+    modeldata: 1002
+  netherite_string:
+    name: "&7Незеритовая нить"
+    description:
+      - "&bЦенее любого алмаза"
+    modeldata: 1003
+  fishing_rod:
+    name: "Удочка"
+    description:
+      - "Обычная удочка"
+    modeldata: 0
+    req_level: 0
+    xp_boost: 1.0
+  iron_rod:
+    name: "&bЖелезная удочка"
+    description:
+      - "&aПозволяет рыбачить эфективнее"
+      - "&eОпыт x1.5"
+      - "&dНеобходимый уровень: 3"
+    modeldata: 1000
+    req_level: 3
+    xp_boost: 1.5
+  diamond_rod:
+    name: "&bАлмазная удочка"
+    description:
+      - "&aПозволяет рыбачить эфективнее"
+      - "&eОпыт x2.0"
+      - "&dНеобходимый уровень: 5"
+    modeldata: 1001
+    req_level: 5
+    xp_boost: 2.0
+  fancy_rod:
+    name: "&bПричудливая удочка"
+    description:
+      - "&aПозволяет вылавливать мобов"
+      - "&eОпыт x1.5"
+      - "&dНеобходимый уровень: 2"
+    modeldata: 1002
+    req_level: 2
+    xp_boost: 1.5
+  experience_rod:
+    name: "&bУдочка всезнайки"
+    description:
+      - "&aУничтожает весь дроп"
+      - "&eОпыт x3.5"
+      - "&dНеобходимый уровень: 3"
+    modeldata: 1003
+    req_level: 3
+    xp_boost: 3.5
+  realistic_rod:
+    name: "&bРеалистичная удочка"
+    description:
+      - "&aНасколько же она реалистичная..."
+      - "&eОпыт x2.2"
+      - "&dНеобходимый уровень: 4"
+    modeldata: 1004
+    req_level: 4
+    xp_boost: 2.2
+  pufferfish_rod:
+    name: "&bУдочка из рыбы фугу"
+    description:
+      - "&aПарой ловит опысных мобов"
+      - "&eОпыт x5.0"
+      - "&dНеобходимый уровень: 5"
+    modeldata: 1005
+    req_level: 5
+    xp_boost: 5.0
+  nether_rod:
+    name: "&bАдская удочка"
+    description:
+      - "&aЛовит адских мобов"
+      - "&eОпыт x4.5"
+      - "&dНеобходимый уровень: 6"
+    modeldata: 1006
+    req_level: 6
+    xp_boost: 4.5
+  mining_rod:
+    name: "&bШахтерская удочка"
+    description:
+      - "&aНу кто бы мог подумать"
+      - "&eОпыт x2.8"
+      - "&dНеобходимый уровень: 8"
+    modeldata: 1007
+    req_level: 8
+    xp_boost: 2.8
+  pirate_rod:
+    name: "&bПиратская удочка"
+    description:
+      - "&aЯ слышу Аррр!"
+      - "&eОпыт x2.0"
+      - "&dНеобходимый уровень: 9"
+    modeldata: 1008
+    req_level: 9
+    xp_boost: 2.0
+  meat_rod:
+    name: "&bМясная удочка"
+    description:
+      - "&aМмм! Вкуснятина!"
+      - "&eОпыт x2.5"
+      - "&dНеобходимый уровень: 9"
+    modeldata: 1009
+    req_level: 9
+    xp_boost: 2.5
+  grass_rod:
+    name: "&bТравяная удочка"
+    description:
+      - "&aЭто точно удочка?"
+      - "&eОпыт x3.0"
+      - "&dНеобходимый уровень: 10"
+    modeldata: 1010
+    req_level: 10
+    xp_boost: 3.0
+  axe_rod:
+    name: "&bТопора-удочка"
+    description:
+      - "&aChop-Chop-Chop"
+      - "&eОпыт x2.5"
+      - "&dНеобходимый уровень: 7"
+    modeldata: 1011
+    req_level: 7
+    xp_boost: 2.5
+
+profile:
+  title: "Ваша лицензия рыбака"
+  icon_lore:
+    - "&6Уровень: %level%"
+    - "&dОпыт: %exp%"
+    - "&6След. уровень: %n_level%"
+    - "&dОпыт: %n_exp%"
+  coughed_stat:
+    name: "&6Статистика:"
+    lore:
+      - "&dВыловлено всего: %catch_c%"
+      - "&dВыловлено мобов: %catch_m%"
+      - "&dВыловлено предметов: %catch_i%"
+
+messages:
+  level_up: "&aВы повысели уровень рыбалки до %level%!"
+  get_exp: "&dВы получили %exp% опыта рыбалки!"
+  low_level: "&cВам необходим %level% уровень для использования этой удочки!"

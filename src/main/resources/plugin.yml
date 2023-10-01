@@ -1,0 +1,14 @@
+name: FancyFishing
+version: '${project.version}'
+main: org.zaksen.fancyfishing.FancyFishing
+api-version: '1.16'
+authors: [Zaksen_]
+commands:
+  skills:
+    description: open player skill menu
+    aliases:
+      - skls
+  fishing:
+    description: change xp
+    aliases:
+      - fs
