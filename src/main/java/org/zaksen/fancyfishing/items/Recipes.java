@@ -234,7 +234,7 @@ public class Recipes {
                 "S N"
         );
         axeRodRecipe.setIngredient('A', Material.IRON_AXE);
-        axeRodRecipe.setIngredient('S', Material.STRING);
+        axeRodRecipe.setIngredient('S', Material.STICK);
         axeRodRecipe.setIngredient('N', new RecipeChoice.ExactChoice(Strings.IRON_STRING.getString()));
         Bukkit.addRecipe(axeRodRecipe);
         recipes.add(axeRodKey);

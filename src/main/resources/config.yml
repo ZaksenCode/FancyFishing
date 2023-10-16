@@ -398,14 +398,22 @@ loot_table:
         - "&7Возможно даже человека"
         - "&bПойман игроком: &r&a %player%"
       material: BONE
-    prismarine:
+    dried_kelp_block:
       type: ITEM
-      name: "&fПризмарин"
-      chance: 0.10
+      name: "&fБлок сушёной ламинарии"
+      chance: 0.05
       lore:
-        - "&7До чего же он красив"
+        - "&7Любимая еда пиратов"
         - "&bПойман игроком: &r&a %player%"
-      material: PRISMARINE
+      material: DRIED_KELP_BLOCK
+    skeleton_skull:
+      type: ITEM
+      name: "&fЧереп"
+      chance: 0.05
+      lore:
+        - "&7Что-то мне поплохело"
+        - "&bПойман игроком: &r&a %player%"
+      material: SKELETON_SKULL
     iron_nugget:
       type: ITEM
       name: "&fЖелезный самородок"
@@ -438,10 +446,34 @@ loot_table:
         - "&7Тяжеленный"
         - "&bПойман игроком: &r&a %player%"
       material: GOLD_BLOCK
+    glass_bottle:
+      type: ITEM
+      name: "&fБутылочка"
+      chance: 0.05
+      lore:
+        - "&7К сожалению без карты клада"
+        - "&bПойман игроком: &r&a %player%"
+      material: GLASS_BOTTLE
+    spruce_planks:
+      type: ITEM
+      name: "&fЕловые доски"
+      chance: 0.08
+      lore:
+        - "&7Часть какого-то корабля"
+        - "&bПойман игроком: &r&a %player%"
+      material: SPRUCE_PLANKS
+    spruce_log:
+      type: ITEM
+      name: "&fЕловое бревно"
+      chance: 0.07
+      lore:
+        - "&7Часть какого-то корабля"
+        - "&bПойман игроком: &r&a %player%"
+      material: SPRUCE_LOG
     common_crate:
       type: ITEM
       name: "&fЯщик"
-      chance: 0.05
+      chance: 0.04
       lore:
         - "&7Обычный ящик"
         - "&bПойман игроком: &r&a %player%"
@@ -554,57 +586,657 @@ barrel_loot:
       name: "&aAir"
       lore:
         - "&aAir"
-      chance: 0.60
+      chance: 5.0
       material: AIR
-    stick:
-      name: "&bПалка"
+    sand:
+      name: "&bПесок"
       lore:
-        - "&3Просто палка"
+        - "&3Такой сыпучий"
         - "&bОбнаружено игроком: &r&a %player%"
-      chance: 0.10
-      material: STICK
+      chance: 0.5
+      material: SAND
+    seagrass:
+      name: "&bМорская трава"
+      lore:
+        - "&3Травка гладкая"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.5
+      material: SEAGRASS
     kelp:
       name: "&bЛаминария"
       lore:
         - "&3Кто-то ведь ест их"
         - "&bОбнаружено игроком: &r&a %player%"
-      chance: 0.03
+      chance: 0.5
       material: KELP
-    bone:
-      name: "&bКость"
+    gravel:
+      name: "&bГравий"
       lore:
-        - "&3Spooky, scary skeleton"
+        - "&3Похоже на песок"
         - "&bОбнаружено игроком: &r&a %player%"
-      chance: 0.07
-      material: BONE
-    coal:
-      name: "&bУголь"
+      chance: 0.3
+      material: GRAVEL
+    tube_coral_block:
+      name: "&bБлок трубчатого коралла"
       lore:
-        - "&3Может пригодится"
+        - "&3Мистер дудец?"
         - "&bОбнаружено игроком: &r&a %player%"
-      chance: 0.08
-      material: COAL
-    salmon:
-      name: "&bЛосось"
+      chance: 0.02
+      material: TUBE_CORAL_BLOCK
+    brain_coral_block:
+      name: "&bБлок коралла-мозговика"
       lore:
-        - "&3Самый настоящий"
+        - "&3Самый мозговитый!"
         - "&bОбнаружено игроком: &r&a %player%"
-      chance: 0.05
-      material: SALMON
+      chance: 0.02
+      material: BRAIN_CORAL_BLOCK
+    bubble_coral_block:
+      name: "&bБлок пузырчатого коралла"
+      lore:
+        - "&3Буль-Буль"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.02
+      material: BUBBLE_CORAL_BLOCK
+    fire_coral_block:
+      name: "&bБлок огненного коралла"
+      lore:
+        - "&3Ты горишь как..."
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.02
+      material: FIRE_CORAL_BLOCK
+    horn_coral_block:
+      name: "&bБлок рогового коралла"
+      lore:
+        - "&3Чей же это рог?"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.02
+      material: HORN_CORAL_BLOCK
+    dead_tube_coral_block:
+      name: "&bБлок мёртвого трубчатого коралла"
+      lore:
+        - "&3Мистер дудец?"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.02
+      material: DEAD_TUBE_CORAL_BLOCK
+    dead_brain_coral_block:
+      name: "&bБлок мёртвого коралла-мозговика"
+      lore:
+        - "&3Самый мозговитый!"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.02
+      material: DEAD_BRAIN_CORAL_BLOCK
+    dead_bubble_coral_block:
+      name: "&bБлок мёртвого пузырчатого коралла"
+      lore:
+        - "&3Буль-Буль"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.02
+      material: DEAD_BUBBLE_CORAL_BLOCK
+    dead_fire_coral_block:
+      name: "&bБлок мёртвого огненного коралла"
+      lore:
+        - "&3Ты горишь как..."
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.02
+      material: DEAD_FIRE_CORAL_BLOCK
+    dead_horn_coral_block:
+      name: "&bБлок мёртвого рогового коралла"
+      lore:
+        - "&3Чей же это рог?"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.02
+      material: DEAD_HORN_CORAL_BLOCK
+    tube_coral:
+      name: "&bТрубчатый коралл"
+      lore:
+        - "&3Туу-Туу"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.02
+      material: TUBE_CORAL
+    brain_coral:
+      name: "&bКоралл-мозговик"
+      lore:
+        - "&3Это чей-то мозг?"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.02
+      material: BRAIN_CORAL
+    bubble_coral:
+      name: "&bПузырчатый коралл"
+      lore:
+        - "&3БWomp-Womp"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.02
+      material: BUBBLE_CORAL
+    fire_coral:
+      name: "&bОгненный коралл"
+      lore:
+        - "&3Уже сгорел?"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.02
+      material: FIRE_CORAL
+    horn_coral:
+      name: "&bРоговый коралл"
+      lore:
+        - "&3Жаль не подудеть.."
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.02
+      material: HORN_CORAL
+    dead_tube_coral:
+      name: "&bМёртвый трубчатый коралл"
+      lore:
+        - "&3Туу-Туу"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.02
+      material: DEAD_TUBE_CORAL
+    dead_brain_coral:
+      name: "&bМёртвый коралл-мозговик"
+      lore:
+        - "&3Это чей-то мозг?"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.02
+      material: DEAD_BRAIN_CORAL
+    dead_bubble_coral:
+      name: "&bМёртвый пузырчатый коралл"
+      lore:
+        - "&3БWomp-Womp"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.02
+      material: DEAD_BUBBLE_CORAL
+    dead_fire_coral:
+      name: "&bМёртвый огненный коралл"
+      lore:
+        - "&3Уже сгорел?"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.02
+      material: DEAD_FIRE_CORAL
+    dead_horn_coral:
+      name: "&bМёртвый роговый коралл"
+      lore:
+        - "&3Жаль не подудеть.."
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.02
+      material: DEAD_HORN_CORAL
+    tropical_fish:
+      name: "&bТропическая рыба"
+      lore:
+        - "&3Прямиком из тропиков"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.1
+      material: TROPICAL_FISH
     cod:
       name: "&bТреска"
       lore:
-        - "&3Не забудь пожарить!"
+        - "&3Тряшит..."
         - "&bОбнаружено игроком: &r&a %player%"
-      chance: 0.05
+      chance: 0.3
       material: COD
-    iron:
-      name: "&bЖелезо"
+    salmon:
+      name: "&bЛосось"
       lore:
-        - "&3Полезый метал"
+        - "&3Лососось"
         - "&bОбнаружено игроком: &r&a %player%"
-      chance: 0.02
+      chance: 0.3
+      material: SALMON
+    pufferfish_bucket:
+      name: "&bИглобрюх в ведре"
+      lore:
+        - "&3Не хотите уколотся?"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.0125
+      material: PUFFERFISH_BUCKET
+    cod_bucket:
+      name: "&bТреска в ведре"
+      lore:
+        - "&3Ты думал здесь что-то будет?"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.0125
+      material: COD
+    salmon_bucket:
+      name: "&bЛосось в ведре"
+      lore:
+        - "&3Здесь могла быть ваша реклама"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.0125
+      material: SALMON
+    tropical_fish_bucket:
+      name: "&bТропическая рыба в ведре"
+      lore:
+        - "&3Она отроет вам тропы в рим"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.0125
+      material: TROPICAL_FISH_BUCKET
+    clay:
+      name: "&bГлина"
+      lore:
+        - "&3Твори и лепи"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.5
+      material: CLAY_BALL
+    white_terracotta:
+      name: "&bБелая керамика"
+      lore:
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.01
+      material: WHITE_TERRACOTTA
+    orange_terracotta:
+      name: "&bОранжевая керамика"
+      lore:
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.01
+      material: ORANGE_TERRACOTTA
+    magenta_terracotta:
+      name: "&bПурпурная керамика"
+      lore:
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.01
+      material: MAGENTA_TERRACOTTA
+    light_blue_terracotta:
+      name: "&bГолубая керамика"
+      lore:
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.01
+      material: LIGHT_BLUE_TERRACOTTA
+    yellow_terracotta:
+      name: "&bЖёлтая керамика"
+      lore:
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.01
+      material: YELLOW_TERRACOTTA
+    lime_terracotta:
+      name: "&bЛаймовая керамика"
+      lore:
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.01
+      material: LIME_TERRACOTTA
+    pink_terracotta:
+      name: "&bРозовая керамика"
+      lore:
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.01
+      material: PINK_TERRACOTTA
+    gray_terracotta:
+      name: "&bСерая керамика"
+      lore:
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.01
+      material: GRAY_TERRACOTTA
+    light_gray_terracotta:
+      name: "&bСветло-серая керамика"
+      lore:
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.01
+      material: LIGHT_GRAY_TERRACOTTA
+    cyan_terracotta:
+      name: "&bБерюзовая керамика"
+      lore:
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.01
+      material: CYAN_TERRACOTTA
+    purple_terracotta:
+      name: "&bФиолетавая керамика"
+      lore:
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.01
+      material: PURPLE_TERRACOTTA
+    blue_terracotta:
+      name: "&bСиняя керамика"
+      lore:
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.01
+      material: BLUE_TERRACOTTA
+    brown_terracotta:
+      name: "&bКоричневая керамика"
+      lore:
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.01
+      material: BROWN_TERRACOTTA
+    green_terracotta:
+      name: "&bЗелёная керамика"
+      lore:
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.01
+      material: GREEN_TERRACOTTA
+    red_terracotta:
+      name: "&bКрасная керамика"
+      lore:
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.01
+      material: RED_TERRACOTTA
+    black_terracotta:
+      name: "&bЧёрная керамика"
+      lore:
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.01
+      material: BLACK_TERRACOTTA
+    lily_pad:
+      name: "&bКувшинка"
+      lore:
+        - "&3Такая круглая"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.3
+      material: LILY_PAD
+    pufferfish:
+      name: "&bИглобрюх"
+      lore:
+        - "&3Такая круглая"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.1
+      material: PUFFERFISH
+    diamond:
+      name: "&bАлмаз"
+      lore:
+        - "&3Брилиант?"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.0005
+      material: DIAMOND
+    emerald:
+      name: "&bИзумруд"
+      lore:
+        - "&3Хоооо"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.001
+      material: EMERALD
+    iron:
+      name: "&bЖелезный слиток"
+      lore:
+        - "&3Боньк!"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.005
       material: IRON_INGOT
+    gold:
+      name: "&bЗолотой слиток"
+      lore:
+        - "&3Блестит!"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.005
+      material: GOLD_INGOT
+    lazuli:
+      name: "&bЛазурит"
+      lore:
+        - "&3Чарующи манит"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.0005
+      material: LAPIS_LAZULI
+    iron_nugget:
+      name: "&bЖелезный самородок"
+      lore:
+        - "&3Магнит?"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.01
+      material: IRON_NUGGET
+    gold_nugget:
+      name: "&bЗолотой самородок"
+      lore:
+        - "&3Даже он дорого стоит!"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.01
+      material: GOLD_NUGGET
+    rotten_flesh:
+      name: "&bГнилая плоть"
+      lore:
+        - "&3От неё воняет! фу!"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.01
+      material: ROTTEN_FLESH
+    gunpowder:
+      name: "&bПорох"
+      lore:
+        - "&3Creeper? awwwww maaan!"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.005
+      material: GUNPOWDER
+    bone:
+      name: "&bКость"
+      lore:
+        - "&3Spooky, scary skeleton!"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.01
+      material: BONE
+    ink_sac:
+      name: "&bЧернильный мешок"
+      lore:
+        - "&3Это что cum спрута?!"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.3
+      material: INK_SAC
+    leather:
+      name: "&bКожа"
+      lore:
+        - "&3Содрали прямо с моба"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.005
+      material: LEATHER
+    wool:
+      name: "&bШерсть"
+      lore:
+        - "&3Бедная овечка"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.001
+      material: WHITE_WOOL
+    wet_sponge:
+      name: "&bМокрая губка"
+      lore:
+        - "&3Намокла в процессе"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.001
+      material: WET_SPONGE
+    sponge:
+      name: "&bГубка"
+      lore:
+        - "&3Что?! Как она смогла не впитать в себя воду?!"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.000005
+      material: SPONGE
+    feather:
+      name: "&bПеро"
+      lore:
+        - "&3Принадлежало курице. Или не курице?"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.001
+      material: FEATHER
+    scute:
+      name: "&bЩиток"
+      lore:
+        - "&3Мини черепашка"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.0005
+      material: SCUTE
+    porkchop:
+      name: "&bСырая свинина"
+      lore:
+        - "&3Хрю-хрю"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.001
+      material: PORKCHOP
+    mutton:
+      name: "&bСырая баранина"
+      lore:
+        - "&3Беее"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.001
+      material: MUTTON
+    beef:
+      name: "&bСырая говядина"
+      lore:
+        - "&3Муууу"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.001
+      material: BEEF
+    chicken:
+      name: "&bКурятина"
+      lore:
+        - "&3Ко-ко!"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.001
+      material: CHICKEN
+    wheat:
+      name: "&bПшеница"
+      lore:
+        - "&3Весьма полезная штучка!"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.005
+      material: CHICKEN
+    beetroot:
+      name: "&bСвёкла"
+      lore:
+        - "&3Я её обожаю!"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.005
+      material: BEETROOT
+    carrot:
+      name: "&bМорковь"
+      lore:
+        - "&3More-ковь"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.005
+      material: CARROT
+    potato:
+      name: "&bКартофель"
+      lore:
+        - "&3Car-тофель"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.005
+      material: POTATO
+    wheat_seeds:
+      name: "&bСемена пшеницы"
+      lore:
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.01
+      material: WHEAT_SEEDS
+    beetroot_seeds:
+      name: "&bСемена свёклы"
+      lore:
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.01
+      material: BEETROOT_SEEDS
+    pumpkin_seeds:
+      name: "&bСемена тыквы"
+      lore:
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.01
+      material: PUMPKIN_SEEDS
+    melon_seeds:
+      name: "&bСемена арбуза"
+      lore:
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.0005
+      material: MELON_SEEDS
+    bamboo:
+      name: "&bБамбук"
+      lore:
+        - "&3Главное не кури его!"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.005
+      material: BAMBOO
+    name_tag:
+      name: "&bБирка"
+      lore:
+        - "&3Как тебя зовут?"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.001
+      material: NAME_TAG
+    leather_horse_armor:
+      name: "&bКожаная конская броня"
+      lore:
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.001
+      material: LEATHER_HORSE_ARMOR
+    golden_horse_armor:
+      name: "&bЗолотая конская броня"
+      lore:
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.001
+      material: GOLDEN_HORSE_ARMOR
+    iron_horse_armor:
+      name: "&bЖелезная конская броня"
+      lore:
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.001
+      material: IRON_HORSE_ARMOR
+    diamond_horse_armor:
+      name: "&bАлмазная конская броня"
+      lore:
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.001
+      material: DIAMOND_HORSE_ARMOR
+    totem_of_undying:
+      name: "&bТотем бессмертия"
+      lore:
+        - "&3Твой личный телохранитель!"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.000005
+      material: TOTEM_OF_UNDYING
+    nautilus_shell:
+      name: "&bРаковина наутилуса"
+      lore:
+        - "&3Жаль что не сам наутилус!"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.0005
+      material: NAUTILUS_SHELL
+    heart_of_the_sea:
+      name: "&bСердце моря"
+      lore:
+        - "&3Обладает силой всех морей!"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.000005
+      material: HEART_OF_THE_SEA
+    experience_bottle:
+      name: "&bПузырёк опыта"
+      lore:
+        - "&3Уже на опыте"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.000005
+      material: EXPERIENCE_BOTTLE
+    compass:
+      name: "&bКомпас"
+      lore:
+        - "&3Кам ин асс. Ноу!"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.005
+      material: COMPASS
+    clock:
+      name: "&bЧасы"
+      lore:
+        - "&3Сколько сейчас время?"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.005
+      material: CLOCK
+    bow:
+      name: "&bЛук"
+      lore:
+        - "&3Оружие дальнего боя!"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.0005
+      material: BOW
+      type: BRAKED
+      dur_amount:
+        min: 15
+        max: 250
+    wooden_sword:
+      name: "&bДеревянный меч"
+      lore:
+        - "&3Оружие дальнего боя!"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.0005
+      material: WOODEN_SWORD
+      type: BRAKED
+      dur_amount:
+        min: 15
+        max: 250
+    ench_book_1:
+      name: "&bПочинка"
+      lore:
+        - "&3Ваши вещи больше не сломаются!"
+        - "&bОбнаружено игроком: &r&a %player%"
+      chance: 0.0005
+      material: ENCHANTED_BOOK
+      type: ENCHANTED
+      enchants:
+        MENDING:
+          min: 1
+          max: 1
+
+
   uncommon_crate:
     air:
       name: "&aAir"
@@ -621,17 +1253,10 @@ barrel_loot:
     iron:
       name: "&bЖелезо"
       lore:
-        - "&3Позелно во всех сферах"
+        - "&3Полезно во всех сферах"
         - "&bОбнаружено игроком: &r&a %player%"
       chance: 0.05
       material: IRON_INGOT
-    prismarine:
-      name: "&bПризмарин"
-      lore:
-        - "&3Необычный камень"
-        - "&bОбнаружено игроком: &r&a %player%"
-      chance: 0.05
-      material: PRISMARINE
     cobblestone:
       name: "&bБулыжник"
       lore:
@@ -674,13 +1299,13 @@ barrel_loot:
         - "&bОбнаружено игроком: &r&a %player%"
       chance: 0.01
       material: GOLDEN_CARROT
-    soul_sand:
-      name: "&bПесок душ"
+    magma_block:
+      name: "&bМагма"
       lore:
-        - "&3Вы чюствуете тысячи летнюю боль"
+        - "&3Лава в виде блока"
         - "&bОбнаружено игроком: &r&a %player%"
       chance: 0.01
-      material: SOUL_SAND
+      material: MAGMA_BLOCK
     sand:
       name: "&bПесок"
       lore:
@@ -695,13 +1320,6 @@ barrel_loot:
         - "&bОбнаружено игроком: &r&a %player%"
       chance: 0.01
       material: NAME_TAG
-    redstone:
-      name: "&bРедстоун"
-      lore:
-        - "&3Что он забыл под водой?"
-        - "&bОбнаружено игроком: &r&a %player%"
-      chance: 0.02
-      material: REDSTONE
     lapis_lazuli:
       name: "&bЛазурит"
       lore:
@@ -716,29 +1334,22 @@ barrel_loot:
         - "&4Вспоминая название этой бумаги"
         - "&4вы проникаетесь мыслями о подземелье"
         - "&bОбнаружено игроком: &r&a %player%"
-      chance: 0.02
+      chance: 0.01
       material: PAPER
-    glowstone_dust:
-      name: "&bСветокаменная пыль"
+    gunpowder:
+      name: "&bПорох"
       lore:
-        - "&3Озаряет ярким светом"
+        - "&3Creeper? awww maaan!"
         - "&bОбнаружено игроком: &r&a %player%"
       chance: 0.03
-      material: GLOWSTONE_DUST
+      material: GUNPOWDER
     wet_sponge:
       name: "&bМокрая губка"
       lore:
         - "&3Кто-то её намочил"
         - "&bОбнаружено игроком: &r&a %player%"
-      chance: 0.02
+      chance: 0.01
       material: WET_SPONGE
-    sea_lantern:
-      name: "&bМорской фонарь"
-      lore:
-        - "&3Водный источник света"
-        - "&bОбнаружено игроком: &r&a %player%"
-      chance: 0.03
-      material: SEA_LANTERN
 
 items:
   iron_string:
@@ -868,7 +1479,7 @@ items:
     req_level: 10
     xp_boost: 3.0
   axe_rod:
-    name: "&bТопора-удочка"
+    name: "&bТопор удочка"
     description:
       - "&aChop-Chop-Chop"
       - "&eОпыт x2.5"

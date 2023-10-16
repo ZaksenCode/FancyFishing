@@ -5,15 +5,19 @@ import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.block.Barrel;
 import org.bukkit.block.Block;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.Damageable;
+import org.bukkit.inventory.meta.EnchantmentStorageMeta;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataType;
 import org.zaksen.fancyfishing.FancyFishing;
 import org.zaksen.fancyfishing.items.Crates;
+import org.zaksen.fancyfishing.items.FishingRods;
 import org.zaksen.fancyfishing.keys.FishingKeys;
 import org.zaksen.fancyfishing.util.WeightedRandomBag;
 
@@ -50,6 +54,35 @@ public class OtherEvents implements Listener {
                             .replaceAll("%player%", event.getPlayer().getName())
                     ));
                     generatedItemMeta.setLore(caughtItemLore);
+
+                    if(FancyFishing.getMainConfig().getString(selectedLootFrame + ".type") != null) {
+                        if (FancyFishing.getMainConfig().getString(selectedLootFrame + ".type").equals("BRAKED")) {
+                            if(!(generatedItemMeta instanceof Damageable)) {
+                                return;
+                            }
+                            int minDur = FancyFishing.getMainConfig().getInt(selectedLootFrame + "dur_amount.min");
+                            int maxDur = FancyFishing.getMainConfig().getInt(selectedLootFrame + "dur_amount.max");
+                            int random = (int) (Math.random() * maxDur + minDur);
+                            ((Damageable) generatedItemMeta).setDamage(random);
+                        } else if(FancyFishing.getMainConfig().getString(selectedLootFrame + ".type").equals("ENCHANTED")) {
+                            if(!(generatedItemMeta instanceof EnchantmentStorageMeta)) {
+                                return;
+                            }
+                            EnchantmentStorageMeta enchMeta = (EnchantmentStorageMeta) generatedItemMeta;
+                            String finalSelectedLootFrame = selectedLootFrame;
+                            FancyFishing.getMainConfig().getStringList(selectedLootFrame + ".enchants").forEach((enchName) -> {
+                                int minLvl = FancyFishing.getMainConfig().getInt(finalSelectedLootFrame + "enchants." + enchName + ".min");
+                                int maxLvl = FancyFishing.getMainConfig().getInt(finalSelectedLootFrame + "enchants." + enchName + ".max");
+                                int random = (int) (Math.random() * minLvl + maxLvl);
+                                enchMeta.addStoredEnchant(Enchantment.getByName(enchName), random, false);
+                            });
+                            generatedItem.setItemMeta(enchMeta);
+                            return;
+                        } else {
+                            FancyFishing.getInstance().getLogger().warning("Unknown item sub type: " + FancyFishing.getMainConfig().getString(selectedLootFrame + ".type"));
+                        }
+                    }
+
                     generatedItem.setItemMeta(generatedItemMeta);
                 }
 
